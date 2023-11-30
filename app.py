@@ -9,6 +9,16 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/new")
+def new():
+    return render_template("new.html")
+
+
+@app.route("/show")
+def show():
+    return render_template("show.html")
+
+
 @app.route("/test")
 def test():
     return render_template("test.html")

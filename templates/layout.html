@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <!-- viewportとは、PCやモバイル（スマホ、タブレット）といったデバイスごとにコンテンツの表示領域を設定するためのHTML属性値（meta要素のname属性の属性値）のことです。直訳すると「表示領域」を意味し、読み方は「ビューポート」です。 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Document</title>
+
     {% block head %}{% endblock %}
 </head>
 
 <body>
+    <header class="header-nav">
+        <nav><a href="/" role="button">top</a></nav>
+        <nav><a href="/test" role="button">test</a></nav>
+    </header>
     {% block body %}{% endblock %}
 </body>
 
