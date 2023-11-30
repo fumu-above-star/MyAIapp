@@ -14,9 +14,13 @@ def new():
     return render_template("new.html")
 
 
-@app.route("/show")
+@app.route("/show", methods=["GET", "POST"])
 def show():
-    return render_template("show.html")
+    if request.method == "GET":
+        return render_template("show.html")
+    else:
+        passage = request.form.get("passage")
+        return render_template("show.html", passage3=passage)
 
 
 @app.route("/test")
